@@ -1,0 +1,46 @@
+﻿@using FisherShop.Models
+@model List<Items>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fish</title>
+    <style>
+.div_content {
+    display: inline-block;
+    margin: 10px;
+    padding: 45px 0 0;
+    min-height: 200px;
+    width: 270px;
+    background-color: grey;
+    text-align: center;
+}
+ 
+.div_content p {
+    font-size: 30px;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div>
+            <div class="top-content">
+                @foreach (Items item in Model)
+                {
+                    <div class="div_content">
+                        <div>
+                            <p>@item.Name</p>
+                            <h6 style="margin-bottom: 0px;">Цена</h6>
+                            <p style="margin-top: 0px;">@item.Price</p>
+                        </div>
+                    </div>
+                }
+            </div>
+    </div>
+</body>
+</html>
